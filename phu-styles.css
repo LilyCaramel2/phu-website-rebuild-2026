@@ -1,7 +1,4 @@
-/* 
-   PHU Premium 2026 UI - Neutral Glassmorphism
-   Navy + sand + glass, single theme (no dark/light toggle)
-*/
+/* PHU Premium 2026 UI - Neutral Glassmorphism */
 
 /* Brand + core palette */
 :root {
@@ -158,7 +155,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Primary = solid, Secondary = text-style */
 .phu-btn-primary {
   background: var(--phu-blue-mid);
   color: var(--phu-white);
@@ -193,7 +189,7 @@ body {
   height: 100vh;
   min-height: 750px;
   display: flex;
-  align-items: center;
+  align-items: center;   /* vertically centred */
   overflow: hidden;
 }
 
@@ -210,17 +206,17 @@ body {
   background: #111;
 }
 
-/* Softer sand wash over left side */
+/* Darker overlay only where text is, so white shows */
 .phu-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right,
-      rgba(243, 236, 223, 0.38) 26%,
+      rgba(0, 0, 0, 0.55) 28%,   /* dark on left */
       transparent 100%
   );
 }
 
-/* Left-aligned hero content */
+/* Hero content: left-aligned */
 .phu-hero-content {
   max-width: 650px;
   text-align: left;
@@ -230,28 +226,28 @@ body {
   font-size: 4.6rem;
   font-weight: 900;
   line-height: 1;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.3rem;
   letter-spacing: -3px;
-  color: var(--phu-text-dark);
+  color: var(--phu-white);  /* white over dark overlay */
 }
 
 .phu-accent-text {
   background: linear-gradient(135deg,
-      var(--phu-blue-mid),
-      var(--phu-blue-soft)
+      var(--phu-blue-soft),
+      var(--phu-offwhite)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Shorter, stronger subtitle */
+/* Subtitle: white & bold so it reads */
 .phu-hero-subtitle {
   font-size: 1.4rem;
   margin-bottom: 2rem;
   max-width: 540px;
-  color: var(--phu-text-dark);
+  color: var(--phu-white);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 /* Hero CTAs: primary button + text link */
@@ -259,26 +255,24 @@ body {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
 }
 
-/* Call area – inline, no label */
+/* Call line: single, white, bold */
 .phu-call-area {
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
 }
 
 .phu-call-link {
   text-decoration: none;
-  color: var(--phu-text-dark);
+  color: var(--phu-white);
   display: inline-flex;
-  flex-direction: row;
   align-items: baseline;
 }
 
 .phu-call-number {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 800;
-  color: var(--phu-text-dark);
 }
 
 /* Sections */
@@ -528,7 +522,7 @@ body {
 /* Responsive */
 @media (max-width: 1024px) {
   .phu-hero-title { font-size: 3.8rem; }
-  .phu-hero-subtitle { font-size: 1.25rem; }
+  .phu-hero-subtitle { font-size: 1.3rem; }
   .phu-trust-signals { grid-template-columns: 1fr; }
   .phu-gallery-grid { grid-template-columns: 1fr; }
   .phu-contact-content { 
