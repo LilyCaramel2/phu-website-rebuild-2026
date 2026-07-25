@@ -1,6 +1,6 @@
 /* 
    PHU Premium 2026 UI - Neutral Glassmorphism
-   Navy + sand + glass, no dark/light toggle
+   Navy + sand + glass, single theme (no dark/light toggle)
 */
 
 /* Brand + core palette */
@@ -25,7 +25,7 @@
   --phu-transition:  all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Single neutral theme tokens (no dark/light classes) */
+/* Single neutral theme tokens */
 body {
   --bg-color:      var(--phu-canvas-light);      /* sand / cream background */
   --text-color:    var(--phu-text-dark);
@@ -137,7 +137,7 @@ body {
   gap: 1.5rem;
 }
 
-/* Theme toggle becomes a simple icon button (can remove JS) */
+/* Theme toggle icon (no JS needed) */
 .phu-theme-toggle {
   background: none;
   border: none;
@@ -210,12 +210,12 @@ body {
   background: #111; /* fallback */
 }
 
-/* Warm sand wash over left side, clear image on right */
+/* Softer sand wash over left side */
 .phu-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right,
-      rgba(243, 236, 223, 0.96) 42%,   /* cream/sand */
+      rgba(243, 236, 223, 0.55) 30%,   /* softer cream, less width */
       transparent 100%
   );
 }
@@ -233,7 +233,7 @@ body {
   color: var(--phu-text-dark);
 }
 
-/* Accent text uses mid/soft blue gradient, not harsh neon */
+/* Accent text uses mid/soft blue gradient */
 .phu-accent-text {
   background: linear-gradient(135deg,
       var(--phu-blue-mid),
