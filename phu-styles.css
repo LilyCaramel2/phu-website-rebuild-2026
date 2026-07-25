@@ -1,6 +1,6 @@
 /* 
-   PHU Premium 2026 UI - Glassmorphism Edition
-   Ultra-modern, fluid, and responsive
+   PHU Premium 2026 UI - Neutral Glassmorphism
+   Navy + sand + glass, no dark/light toggle
 */
 
 /* Brand + core palette */
@@ -25,24 +25,13 @@
   --phu-transition:  all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Theme tokens */
-body.theme-light {
-  --bg-color:      var(--phu-canvas-light);
+/* Single neutral theme tokens (no dark/light classes) */
+body {
+  --bg-color:      var(--phu-canvas-light);      /* sand / cream background */
   --text-color:    var(--phu-text-dark);
-  --glass-bg:      rgba(255, 255, 255, 0.72);
+  --glass-bg:      rgba(255, 255, 255, 0.78);   /* pale glass cards */
   --glass-border:  rgba(0, 0, 0, 0.06);
-  --card-shadow:   0 8px 32px rgba(0, 0, 0, 0.08);
-}
-
-body.theme-dark {
-  --bg-color:      radial-gradient(circle at top left,
-                     #1b2a54 0%,
-                     var(--phu-blue-deep) 40%,
-                     #020617 100%);
-  --text-color:    var(--phu-text-light);
-  --glass-bg:      rgba(15, 23, 42, 0.78);
-  --glass-border:  rgba(255, 255, 255, 0.16);
-  --card-shadow:   0 8px 32px rgba(0, 0, 0, 0.55);
+  --card-shadow:   0 10px 36px rgba(0, 0, 0, 0.12);
 }
 
 /* Resets */
@@ -89,10 +78,11 @@ body {
   right: 0;
   z-index: 1000;
   padding: 1.25rem 0;
-  background: var(--glass-bg);
+  background: rgba(16, 35, 79, 0.9);   /* deep navy strip */
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
-  border-bottom: 1px solid var(--glass-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--phu-offwhite);
 }
 
 .phu-header .phu-container {
@@ -117,7 +107,7 @@ body {
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 2px;
-  color: var(--phu-accent);
+  color: var(--phu-blue-soft);
   margin-top: 2px;
 }
 
@@ -129,15 +119,15 @@ body {
 
 .phu-nav a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--phu-offwhite);
   font-weight: 500;
   font-size: 0.9rem;
   transition: var(--phu-transition);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .phu-nav a:hover {
-  color: var(--phu-accent);
+  color: var(--phu-blue-soft);
   opacity: 1;
 }
 
@@ -147,10 +137,11 @@ body {
   gap: 1.5rem;
 }
 
+/* Theme toggle becomes a simple icon button (can remove JS) */
 .phu-theme-toggle {
   background: none;
   border: none;
-  color: var(--text-color);
+  color: var(--phu-offwhite);
   cursor: pointer;
   padding: 4px;
   display: flex;
@@ -171,7 +162,7 @@ body {
 }
 
 .phu-btn-primary {
-  background: var(--phu-accent);
+  background: var(--phu-blue-mid);
   color: var(--phu-white);
 }
 
@@ -181,14 +172,14 @@ body {
 }
 
 .phu-btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--phu-text-dark);
   backdrop-filter: blur(8px);
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .phu-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .phu-btn-lg {
@@ -219,10 +210,14 @@ body {
   background: #111; /* fallback */
 }
 
+/* Warm sand wash over left side, clear image on right */
 .phu-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, var(--bg-color) 40%, transparent 100%);
+  background: linear-gradient(to right,
+      rgba(243, 236, 223, 0.96) 42%,   /* cream/sand */
+      transparent 100%
+  );
 }
 
 .phu-hero-content {
@@ -235,11 +230,15 @@ body {
   line-height: 1;
   margin-bottom: 1.5rem;
   letter-spacing: -3px;
+  color: var(--phu-text-dark);
 }
 
+/* Accent text uses mid/soft blue gradient, not harsh neon */
 .phu-accent-text {
-  color: var(--phu-accent);
-  background: linear-gradient(135deg, var(--phu-accent), #5c8aff);
+  background: linear-gradient(135deg,
+      var(--phu-blue-mid),
+      var(--phu-blue-soft)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -247,8 +246,9 @@ body {
 .phu-hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
-  opacity: 0.8;
+  opacity: 0.85;
   max-width: 500px;
+  color: var(--phu-text-dark);
 }
 
 .phu-hero-ctas {
@@ -263,7 +263,7 @@ body {
 
 .phu-call-link {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--phu-text-dark);
   display: flex;
   flex-direction: column;
 }
@@ -272,7 +272,7 @@ body {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--phu-accent);
+  color: var(--phu-blue-soft);
   font-weight: 700;
 }
 
@@ -296,6 +296,7 @@ body {
   font-weight: 900;
   margin-bottom: 1rem;
   letter-spacing: -2px;
+  color: var(--phu-text-dark);
 }
 
 /* Services */
@@ -317,7 +318,7 @@ body {
 
 .phu-service-card:hover {
   transform: translateY(-12px);
-  border-color: var(--phu-accent);
+  border-color: var(--phu-blue-soft);
 }
 
 .phu-service-img {
@@ -343,16 +344,18 @@ body {
 .phu-service-body h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: var(--phu-text-dark);
 }
 
 .phu-service-body p {
   font-size: 0.95rem;
   opacity: 0.7;
   margin-bottom: 2rem;
+  color: var(--phu-text-dark);
 }
 
 .phu-link {
-  color: var(--phu-accent);
+  color: var(--phu-blue-soft);
   text-decoration: none;
   font-weight: 700;
   font-size: 0.9rem;
@@ -360,7 +363,10 @@ body {
 
 /* About */
 .phu-about {
-  background: linear-gradient(180deg, var(--bg-color), rgba(var(--phu-accent-rgb), 0.05));
+  background: linear-gradient(180deg,
+      rgba(243, 236, 223, 1),
+      rgba(var(--phu-accent-rgb), 0.05)
+  );
 }
 
 .phu-about-content {
@@ -372,6 +378,12 @@ body {
 .phu-about h2 {
   font-size: 3.5rem;
   margin-bottom: 2rem;
+  color: var(--phu-text-dark);
+}
+
+.phu-about p {
+  color: var(--phu-text-dark);
+  opacity: 0.9;
 }
 
 .phu-trust-signals {
@@ -394,7 +406,7 @@ body {
   display: block;
   font-size: 1.75rem;
   font-weight: 900;
-  color: var(--phu-accent);
+  color: var(--phu-blue-soft);
   margin-bottom: 0.5rem;
 }
 
@@ -451,8 +463,8 @@ body {
 /* Contact strip */
 .phu-contact-strip {
   padding: 5rem 0;
-  background: var(--phu-accent);
-  color: var(--phu-white);
+  background: var(--phu-blue-deep);  /* strong navy strip */
+  color: var(--phu-offwhite);
 }
 
 .phu-contact-content {
@@ -483,7 +495,7 @@ body {
 /* Footer */
 .phu-footer {
   padding: 6rem 0;
-  border-top: 1px solid var(--glass-border);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .phu-privacy-line {
@@ -491,6 +503,7 @@ body {
   margin-bottom: 4rem;
   font-style: italic;
   opacity: 0.5;
+  color: var(--phu-text-dark);
 }
 
 .phu-footer-bottom {
@@ -498,7 +511,8 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
-  opacity: 0.5;
+  opacity: 0.6;
+  color: var(--phu-text-dark);
 }
 
 .phu-footer-nav {
