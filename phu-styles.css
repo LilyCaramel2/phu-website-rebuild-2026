@@ -14,7 +14,7 @@
   --phu-canvas-light: #f3ecdf;
   --phu-offwhite:     #f5f5f5;
 
-  --phu-text-dark:  #1b1b1b;
+  --phu-text-dark:  #121212;   /* slightly darker for stronger text */
   --phu-text-light: #f5f5f5;
 
   /* Accent + utilities */
@@ -137,7 +137,7 @@ body {
   gap: 1.5rem;
 }
 
-/* Theme toggle icon (no JS needed now) */
+/* Theme toggle icon (visual only) */
 .phu-theme-toggle {
   background: none;
   border: none;
@@ -210,7 +210,7 @@ body {
   background: #111; /* fallback */
 }
 
-/* Even softer sand wash over left side */
+/* Softer sand wash over left side (not too faded) */
 .phu-hero-overlay {
   position: absolute;
   inset: 0;
@@ -243,21 +243,32 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* Stronger subtitle */
 .phu-hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
   max-width: 500px;
-  color: var(--phu-text-dark);   /* solid, no opacity */
+  color: var(--phu-text-dark);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
+/* Hero CTAs */
 .phu-hero-ctas {
   display: flex;
   gap: 1rem;
   margin-bottom: 3.5rem;
 }
 
+/* Call area – highlighted glass pill */
 .phu-call-area {
   display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .phu-call-link {
@@ -265,19 +276,21 @@ body {
   color: var(--phu-text-dark);
   display: flex;
   flex-direction: column;
+  gap: 0.2rem;
 }
 
 .phu-call-label {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   color: var(--phu-blue-soft);
   font-weight: 700;
 }
 
 .phu-call-number {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 800;
+  color: var(--phu-text-dark);
 }
 
 /* Sections */
