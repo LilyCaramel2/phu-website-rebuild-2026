@@ -189,7 +189,7 @@ body {
   height: 100vh;
   min-height: 750px;
   display: flex;
-  align-items: center;   /* vertically centred */
+  align-items: center;
   overflow: hidden;
 }
 
@@ -206,12 +206,12 @@ body {
   background: #111;
 }
 
-/* Darker overlay only where text is, so white shows */
+/* Darker overlay where text is, so off-white reads */
 .phu-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right,
-      rgba(0, 0, 0, 0.55) 28%,   /* dark on left */
+      rgba(0, 0, 0, 0.5) 28%,
       transparent 100%
   );
 }
@@ -228,7 +228,7 @@ body {
   line-height: 1;
   margin-bottom: 1.3rem;
   letter-spacing: -3px;
-  color: var(--phu-white);  /* white over dark overlay */
+  color: var(--phu-offwhite);
 }
 
 .phu-accent-text {
@@ -240,14 +240,14 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Subtitle: white & bold so it reads */
+/* Subtitle: softer off-white, less bold */
 .phu-hero-subtitle {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 2rem;
   max-width: 540px;
-  color: var(--phu-white);
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  color: var(--phu-offwhite);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 /* Hero CTAs: primary button + text link */
@@ -258,21 +258,21 @@ body {
   margin-bottom: 1.2rem;
 }
 
-/* Call line: single, white, bold */
+/* Call line: single, off-white, calmer weight */
 .phu-call-area {
   margin-top: 0.3rem;
 }
 
 .phu-call-link {
   text-decoration: none;
-  color: var(--phu-white);
+  color: var(--phu-offwhite);
   display: inline-flex;
   align-items: baseline;
 }
 
 .phu-call-number {
-  font-size: 1.3rem;
-  font-weight: 800;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 /* Sections */
@@ -522,7 +522,7 @@ body {
 /* Responsive */
 @media (max-width: 1024px) {
   .phu-hero-title { font-size: 3.8rem; }
-  .phu-hero-subtitle { font-size: 1.3rem; }
+  .phu-hero-subtitle { font-size: 1.2rem; }
   .phu-trust-signals { grid-template-columns: 1fr; }
   .phu-gallery-grid { grid-template-columns: 1fr; }
   .phu-contact-content { 
