@@ -137,7 +137,7 @@ body {
   gap: 1.5rem;
 }
 
-/* Theme toggle icon (no JS needed) */
+/* Theme toggle icon (no JS needed now) */
 .phu-theme-toggle {
   background: none;
   border: none;
@@ -210,12 +210,12 @@ body {
   background: #111; /* fallback */
 }
 
-/* Softer sand wash over left side */
+/* Even softer sand wash over left side */
 .phu-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right,
-      rgba(243, 236, 223, 0.55) 30%,   /* softer cream, less width */
+      rgba(243, 236, 223, 0.38) 26%,   /* lighter, narrower wash */
       transparent 100%
   );
 }
@@ -246,9 +246,8 @@ body {
 .phu-hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
-  opacity: 0.85;
   max-width: 500px;
-  color: var(--phu-text-dark);
+  color: var(--phu-text-dark);   /* solid, no opacity */
 }
 
 .phu-hero-ctas {
