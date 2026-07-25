@@ -86,11 +86,19 @@ body {
   align-items: center;
 }
 
+/* Logo uses image in header */
 .phu-logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
+.phu-logo-mark {
+  height: 40px;     /* tweak this up/down to taste */
+  width: auto;
+  display: block;
+}
+
+/* Old text styles (not used now, safe to keep) */
 .phu-logo-text {
   font-size: 1.75rem;
   font-weight: 900;
