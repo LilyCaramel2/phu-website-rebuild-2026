@@ -193,6 +193,16 @@ body {
   overflow: hidden;
 }
 
+/* Hero container pinned left inside content width */
+.phu-hero .phu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .phu-hero-visual {
   position: absolute;
   inset: 0;
@@ -216,19 +226,10 @@ body {
   );
 }
 
-/* Hero container + content left-aligned at margin */
-.phu-hero .phu-container {
-  display: block;
-}
-
+/* Hero content block flush to left margin */
 .phu-hero-content {
   max-width: 650px;
   text-align: left;
-  margin-left: 0;
-}
-
-/* Push hero block flush to left content margin */
-.phu-hero-content {
   margin-left: 0;
 }
 
