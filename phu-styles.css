@@ -91,6 +91,10 @@ body {
   flex-direction: column;
 }
 
+.phu-logo-mark {
+  height: 52px;
+}
+
 .phu-logo-text {
   font-size: 1.75rem;
   font-weight: 900;
@@ -228,10 +232,10 @@ body {
   max-width: none;
   text-align: left;
   margin-left: 0;
-  padding-top: 14rem;   /* drop text down */
+  padding-top: 14rem;
 }
 
-/* H1 + accent: tuned to sit mostly on one row per line on desktop */
+/* H1: built to run strongly across on desktop */
 .phu-hero-title {
   font-size: 3.2rem;
   font-weight: 900;
@@ -250,10 +254,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Subtitle: single line (as viewport allows), full width */
+/* Subtitle lines: one row each as viewport allows */
 .phu-hero-subtitle {
   font-size: 1.1rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.2rem;
   max-width: none;
   color: var(--phu-offwhite);
   font-weight: 600;
@@ -528,20 +532,103 @@ body {
   text-decoration: none;
 }
 
+/* Reviews carousel */
+.phu-reviews {
+  background: var(--phu-canvas-light);
+}
+
+.phu-reviews-shell {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.phu-reviews-track {
+  position: relative;
+}
+
+/* Only one review visible */
+.phu-review-card {
+  display: none;
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  padding: 2.5rem;
+}
+
+.phu-review-active {
+  display: block;
+}
+
+.phu-review-text {
+  font-size: 0.98rem;
+  color: var(--phu-text-dark);
+  margin-bottom: 1.75rem;
+}
+
+.phu-review-meta {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+/* Review controls */
+.phu-reviews-controls {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.phu-review-prev,
+.phu-review-next {
+  background: transparent;
+  border: 1px solid var(--phu-blue-soft);
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: var(--phu-blue-soft);
+}
+
+.phu-review-dots {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.phu-review-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid var(--phu-blue-soft);
+  background: transparent;
+  cursor: pointer;
+}
+
+.phu-review-dot-active {
+  background: var(--phu-blue-soft);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .phu-hero-title { font-size: 2.6rem; }
   .phu-hero-subtitle { font-size: 1rem; }
   .phu-trust-signals { grid-template-columns: 1fr; }
   .phu-gallery-grid { grid-template-columns: 1fr; }
-  .phu-contact-content { 
-    flex-direction: column; 
-    gap: 3rem; 
-    text-align: center; 
+  .phu-contact-content {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
   }
-  .phu-contact-info { 
-    flex-direction: column; 
-    gap: 2rem; 
+  .phu-contact-info {
+    flex-direction: column;
+    gap: 2rem;
   }
 }
 
