@@ -216,10 +216,16 @@ body {
   );
 }
 
-/* Hero content: left-aligned */
+/* Hero container + content left-aligned at margin */
+.phu-hero .phu-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .phu-hero-content {
   max-width: 650px;
   text-align: left;
+  margin-left: 0;
 }
 
 .phu-hero-title {
