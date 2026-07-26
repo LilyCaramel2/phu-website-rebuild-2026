@@ -218,13 +218,17 @@ body {
 
 /* Hero container + content left-aligned at margin */
 .phu-hero .phu-container {
-  display: flex;
-  justify-content: flex-start;
+  display: block;
 }
 
 .phu-hero-content {
   max-width: 650px;
   text-align: left;
+  margin-left: 0;
+}
+
+/* Push hero block flush to left content margin */
+.phu-hero-content {
   margin-left: 0;
 }
 
