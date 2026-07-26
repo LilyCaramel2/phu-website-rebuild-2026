@@ -1,3 +1,4 @@
+```css
 /* PHU Premium 2026 UI - Neutral Glassmorphism */
 
 /* Brand + core palette */
@@ -86,34 +87,19 @@ body {
   align-items: center;
 }
 
-/* Logo uses image in header */
+/* Logo: single image block */
 .phu-logo {
   display: flex;
   align-items: center;
 }
 
 .phu-logo-mark {
-  height: 40px;     /* tweak this up/down to taste */
+  height: 48px;   /* adjust once your 600x150 logo is in */
   width: auto;
   display: block;
 }
 
-/* Old text styles (not used now, safe to keep) */
-.phu-logo-text {
-  font-size: 1.75rem;
-  font-weight: 900;
-  letter-spacing: -1px;
-  line-height: 1;
-}
-
-.phu-logo-subtext {
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--phu-blue-soft);
-  margin-top: 2px;
-}
-
+/* Navigation */
 .phu-nav ul {
   display: flex;
   list-style: none;
@@ -134,6 +120,7 @@ body {
   opacity: 1;
 }
 
+/* Header actions (theme toggle, future icons) */
 .phu-header-actions {
   display: flex;
   align-items: center;
@@ -258,7 +245,7 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Hero CTAs: primary button + text link */
+/* Hero CTAs */
 .phu-hero-ctas {
   display: flex;
   align-items: center;
@@ -266,7 +253,7 @@ body {
   margin-bottom: 1.2rem;
 }
 
-/* Call line: single, off-white, calmer weight */
+/* Call line */
 .phu-call-area {
   margin-top: 0.3rem;
 }
@@ -549,3 +536,4 @@ body {
   .phu-hero-title { font-size: 3rem; }
   .phu-section { padding: 6rem 0; }
 }
+```
