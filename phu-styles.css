@@ -188,7 +188,7 @@ body {
   position: relative;
   height: 100vh;
   min-height: 750px;
-  display: block;       /* no flex centering */
+  display: block;
   overflow: hidden;
 }
 
@@ -197,10 +197,10 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  display: block;       /* block so content starts at left padding */
+  display: block;
 }
 
-/* Background image and overlay */
+/* Background image + overlay */
 .phu-hero-visual {
   position: absolute;
   inset: 0;
@@ -214,29 +214,30 @@ body {
   background: #111;
 }
 
-/* Darker overlay where text is, so off-white reads */
 .phu-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right,
-      rgba(0, 0, 0, 0.5) 28%,
+      rgba(0, 0, 0, 0.55) 18%,
       transparent 100%
   );
 }
 
-/* Hero content block flush to left margin */
+/* Hero content: full-width, lower on the page */
 .phu-hero-content {
-  max-width: 650px;
+  max-width: none;
   text-align: left;
   margin-left: 0;
+  padding-top: 14rem;   /* drop text down */
 }
 
+/* H1 + accent: tuned to sit mostly on one row per line on desktop */
 .phu-hero-title {
-  font-size: 4.6rem;
+  font-size: 3.2rem;
   font-weight: 900;
-  line-height: 1;
-  margin-bottom: 1.3rem;
-  letter-spacing: -3px;
+  line-height: 1.05;
+  margin-bottom: 1.1rem;
+  letter-spacing: -1px;
   color: var(--phu-offwhite);
 }
 
@@ -249,27 +250,26 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Subtitle: softer off-white, less bold */
+/* Subtitle: single line (as viewport allows), full width */
 .phu-hero-subtitle {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-  max-width: 540px;
+  font-size: 1.1rem;
+  margin-bottom: 1.6rem;
+  max-width: none;
   color: var(--phu-offwhite);
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
-/* Hero CTAs: primary button + text link */
+/* Hero CTAs and call line */
 .phu-hero-ctas {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 1.2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-/* Call line: single, off-white, calmer weight */
 .phu-call-area {
-  margin-top: 0.3rem;
+  margin-top: 0.2rem;
 }
 
 .phu-call-link {
@@ -280,7 +280,7 @@ body {
 }
 
 .phu-call-number {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -530,8 +530,8 @@ body {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .phu-hero-title { font-size: 3.8rem; }
-  .phu-hero-subtitle { font-size: 1.2rem; }
+  .phu-hero-title { font-size: 2.6rem; }
+  .phu-hero-subtitle { font-size: 1rem; }
   .phu-trust-signals { grid-template-columns: 1fr; }
   .phu-gallery-grid { grid-template-columns: 1fr; }
   .phu-contact-content { 
@@ -547,6 +547,6 @@ body {
 
 @media (max-width: 768px) {
   .phu-nav { display: none; }
-  .phu-hero-title { font-size: 3rem; }
+  .phu-hero-title { font-size: 2.2rem; }
   .phu-section { padding: 6rem 0; }
 }
