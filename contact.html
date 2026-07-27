@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Terry - Pfeiffer Hill Upholstery | Mannum, SA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="phu-header">
+        <div class="phu-container">
+            <a href="index.html" class="phu-logo">
+                <img src="assets/phu-logo-header.png" alt="PHU Logo" class="phu-logo-img">
+                <div class="phu-logo-text-group">
+                    <span class="phu-logo-name">PHU</span>
+                    <span class="phu-logo-tagline">We Cover Everything</span>
+                </div>
+            </a>
+            <nav class="phu-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#gallery">Our Work</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="phu-header-ctas">
+                <a href="tel:0407390010" class="cta-call">Call 0407 390 010</a>
+                <a href="contact.html" class="phu-btn phu-btn-primary">Get a Fast Quote</a>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="section" style="padding-top: 10rem;">
+        <div class="phu-container">
+            <div class="section-title">
+                <h2>Get in Touch</h2>
+                <p>Have a project in mind? Fill out the form below or give Terry a call directly.</p>
+            </div>
+            
+            <div class="contact-layout">
+                <div class="contact-info-sidebar">
+                    <h3>Contact Details</h3>
+                    <p style="margin-top: 1rem;"><strong>Terry Schutz</strong><br>Founder / Principal</p>
+                    <p><strong>Phone:</strong> <a href="tel:0407390010">0407 390 010</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:contact@phu.com.au">contact@phu.com.au</a></p>
+                    <p><strong>Address:</strong><br>184 Pfeiffer Road, Mannum,<br>South Australia 5238</p>
+                    
+                    <div class="map-container">
+                        <!-- Embedded Google Map -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.4312845814524!2d139.2785644766344!3d-34.85794897043878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab79679641e467d%3A0x6734199920364964!2s184%20Pfeiffer%20Rd%2C%20Mannum%20SA%205238!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="name">Name (required)</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email (required)</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone (required)</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="tarps">Tarps & Agriculture</option>
+                                <option value="auto">Auto Upholstery</option>
+                                <option value="marine">Marine & Houseboat</option>
+                                <option value="custom">Custom / Commercial / Industrial</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message / Job Description (required)</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="photos">Upload photos (placeholder)</label>
+                            <input type="file" id="photos" name="photos">
+                        </div>
+                        <button type="submit" class="phu-btn phu-btn-primary" style="width: 100%;">Send Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="phu-footer">
+        <div class="phu-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Pfeiffer Hill Upholstery</h4>
+                    <p>We Cover Everything. Local South Australian upholstery and tarp manufacturer with 40+ years' experience.</p>
+                    <p style="margin-top: 1rem; font-size: 0.8rem;">Sub-brands: HeaderTarps Australia & Larry’s Garage Products</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#gallery">Our Work</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="proposals.html">Proposals</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Tarps & Agri</a></li>
+                        <li><a href="index.html#services">Auto Upholstery</a></li>
+                        <li><a href="index.html#services">Marine</a></li>
+                        <li><a href="index.html#services">Custom Industrial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>184 Pfeiffer Road, Mannum<br>South Australia 5238</p>
+                    <p>Phone: 0407 390 010</p>
+                    <p>Email: contact@phu.com.au</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pfeiffer Hill Upholstery. All rights reserved.</p>
+                <p>Website by Caramel Digital Studio</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
