@@ -4,6 +4,7 @@
   Brand Colors: Deep Blue (#10234f), Mid Blue (#546d9c), Soft Blue (#778fb1), Canvas (#afa794)
 */
 
+/* --- Design Tokens --- */
 :root {
     /* Brand Colors */
     --phu-blue-deep: #10234f;
