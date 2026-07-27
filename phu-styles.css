@@ -403,7 +403,7 @@ p {
 }
 
 .blog-card {
-    background: var(--white);
+    background: var(--phu-white);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -426,7 +426,7 @@ p {
 }
 
 .contact-form {
-    background: var(--white);
+    background: var(--phu-white);
     padding: 3rem;
     border-radius: var(--radius-xl);
     box-shadow: var(--card-shadow);
@@ -462,7 +462,7 @@ p {
 
 /* --- Proposals Page --- */
 .proposal-card {
-    background: var(--white);
+    background: var(--phu-white);
     border-radius: var(--radius-xl);
     padding: 3rem;
     margin-bottom: 2rem;
